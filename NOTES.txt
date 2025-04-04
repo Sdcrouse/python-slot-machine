@@ -15,3 +15,31 @@ An array's remove() method removes the first instance of a given value.
 
 In a print() statement, the 'end' attribute specifies what to end a line with (default is a new line '\n').
 This is useful when you want to print elements of an array on the same line instead of separate lines.
+
+In Python, you can do a for-else statement (as in the check_winnings() function).
+It has this format:
+    for element in array:
+        if condition:
+            break
+    else:
+        # Do something
+If you break out of the for loop, the else statement will not run.
+But if a break never occurs, then the else statement will execute.
+This is unique to Python; it can be used to check whether you have looped through all of the items in an iterable.
+This makes it easier to run specific code (in the else clause) that should only be run if you have iterated through every element.
+This also works with while loops.
+Just be careful: The else clause will not be executed if you break out of the loop with a return statement or a raised exception.
+
+As a reminder, you can return multiple values.
+Ex: return 1, 2, 3
+Likewise, you can set multiple variables to those return values.
+Ex: a, b, c = my_function()
+
+* is called the 'splat operator'.
+This lets you 'unpack' values from an iterable (like an array) into separate arguments.
+Example:
+    my_array = [0, 'lorem ipsum', True]
+    print('Values of array:', *my_array)
+    
+    # Equivalent print statement:
+    # print('Values of array:', my_array[0], my_array[1], my_array[2])
