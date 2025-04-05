@@ -43,3 +43,17 @@ Example:
     
     # Equivalent print statement:
     # print('Values of array:', my_array[0], my_array[1], my_array[2])
+
+In a while loop (or any type of loop), if you put a break statement inside of an if statement, you don't need an else statement to execute the other code.
+Just put the other code outside of the if statement, but still within the loop.
+(It's similar to when you put a return statement inside of an if statement; you don't need an else clause there either.)
+
+Be careful with name collisions!
+At one point, I had a function named spin() and a string variable named spin.
+When I tried to call the spin() function (no arguments), Python raised this error:
+    TypeError: 'str' object is not callable
+This happened even when I changed the spin() function to accept at least one argument.
+
+When you movie code into a separate function, make sure to give the function whatever parameters and arguments it needs.
+Otherwise, your code may encounter an error like this:
+    NameError: name 'balance' is not defined
